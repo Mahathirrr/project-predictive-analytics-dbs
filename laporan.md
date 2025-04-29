@@ -332,9 +332,8 @@ Evaluasi model dilakukan menggunakan beberapa metrik untuk memastikan performa y
 Mengukur proporsi prediksi yang benar (baik positif maupun negatif) dari total prediksi.
 
 **Formula:**
-\[
-\text{Accuracy} = \frac{\text{TP} + \text{TN}}{\text{TP} + \text{TN} + \text{FP} + \text{FN}}
-\]
+
+Accuracy = (TP + TN)/(TP + TN + FP + FN)
 
 Dimana:
 - TP (True Positive): Jumlah pasien dengan penyakit jantung yang diprediksi benar
@@ -346,25 +345,22 @@ Dimana:
 Mengukur proporsi prediksi positif yang benar dari semua prediksi positif. Penting untuk menghindari false positive (mendiagnosis penyakit pada pasien sehat).
 
 **Formula:**
-\[
-\text{Precision} = \frac{\text{TP}}{\text{TP} + \text{FP}}
-\]
+
+Precision = TP/(TP + FP)
 
 #### Recall (Sensitivity)
 Mengukur proporsi kasus positif aktual yang berhasil diprediksi. Penting untuk menghindari false negative (tidak mendiagnosis penyakit pada pasien yang sebenarnya sakit).
 
-**Formula:**
-\[
-\text{Recall} = \frac{\text{TP}}{\text{TP} + \text{FN}}
-\]
+**Formula:** 
+
+Recall = TP/(TP + FN)
 
 #### F1-Score
 Rata-rata harmonik antara precision dan recall, memberikan satu metrik yang menyeimbangkan keduanya. Penting ketika ingin keseimbangan antara mendeteksi semua kasus positif dan menghindari false positive.
 
 **Formula:**
-\[
-\text{F1-Score} = 2 \times \frac{\text{Precision} \times \text{Recall}}{\text{Precision} + \text{Recall}}
-\]
+
+F1-Score = 2 × (Precision × Recall)/(Precision + Recall)
 
 #### ROC-AUC
 Area Under the Receiver Operating Characteristic Curve, mengukur kemampuan model untuk membedakan antara kelas positif dan negatif. Nilai 1 berarti klasifikasi sempurna, 0.5 berarti klasifikasi acak. ROC-AUC tidak dipengaruhi oleh threshold klasifikasi, sehingga memberikan pandangan yang lebih komprehensif tentang performa model.
